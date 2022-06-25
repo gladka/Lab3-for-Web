@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" enctype="multipart/form-data" method="post">
+  <fieldset>
+    <legend>Личные данные</legend>
+    <div>
+      <label for="id">ID отзыва&emsp;&emsp;&emsp;&emsp;</label>
+      <label for="name">&emsp;&emsp;&emsp;&emsp;Имя путешественника</label>
+    </div>
+    <div>
+        <input id="id" name="id" type="text" value="12345" disabled>
+        &emsp;<input id="name" name="name" type="text" value="Кекс" required>
+    </div>
+    <div>
+      <label for="email">Почта</label>&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;<label for="tel">Телефон</label>
+    </div>
+    <div>
+      <input id="email" name="email" type="email" autocomplete="off" placeholder="Напр.:Keks@gmail.com">
+      &emsp;<input id="tel" name="tel" type="tel" placeholder="Напр.:093-333-33-33">
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Отзыв о поездке</legend>
+    <div>
+      <label for="counryVisit">Страна визита&emsp;&emsp;&emsp;&emsp;</label>
+      <label for="city">&emsp;&emsp;Город</label>
+    </div>
+    <div>
+      <input id="counryVisit" name="country" type="text" value="Норвегия">
+      &emsp;<input id="city" list="listCity" required autocomplete="off">
+        <datalist id="listCity">
+          <option value="Осло">
+          <option value="Олесунн">
+          <option value="Тромсё">
+        </datalist>
+    </div>
+    <div>
+      <label>Оценка поездки&emsp;&emsp;&emsp;&emsp;&nbsp;
+      &emsp;<input type="number" min="0" max="10" value="10" name="rating">
+      </label>
+    </div>
+    <div>
+      <label>Шкала для оценки&emsp;&emsp;&emsp;&emsp;
+      <input type="range" min="0" max="10" name="scale" value="10">
+      </label>
+    </div>
+    <div>
+      <label for="reviews">Текст отзыва<br></label>
+      <label for="reviews">Текст отзыва</label>
+    </div>
+    <div>
+      <textarea id="reviews" placeholder="Это было просто мяу!" spellcheck="false"></textarea>
+    </div>
+    <div>
+      <label>Можно добавить фото с отпуска :)
+          <input type="file" multiple name="photo[]" accept="image/jpeg, image/png">
+      </label>
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Оценка отеля</legend>
+    <div>
+      <label for="hotelName">Название отеля&emsp;&emsp;&emsp;&emsp;</label>
+      &emsp;&ensp;<label for="data">Дата въезда</label>
+    </div>
+    <div>
+      <input id="hotelName" name="hotelName" placeholder="Название по-английски" type="text" required autocomplete="off">
+     &emsp;<input id="data" name="data" type="date">
+    </div>
+    <div>
+      <label for="bedColor">Цвет кроватки&emsp;&emsp;&emsp;&emsp;</label>
+    &emsp;&ensp;&nbsp;<label for="lunchRating">Оценка обедов</label>
+    </div>
+    <div>
+      <input id="bedColor" name="bedColor" type="color">&emsp;&emsp;&emsp;&emsp;
+      &emsp;&emsp;&emsp;&emsp;<select id="lunchRating" name="lunchRating">
+        <option value="1" selected>Подушечки оближешь</option>
+        <option value="2">Вкусняшка</option>
+        <option value="3">За лапы не оттащишь</option>
+      </select>
+    </div>
+    <div>
+      <label>Самая вкусная еда<br>
+        <select multiple >
+          <optgroup label="Рыбка">
+          <option name="fish[]" id="Лосось">Норвежский лосось</option>
+          <option name="fish[]" id="Зубатка">Зубатка</option>
+          <option name="fish[]" id="Окунь">Морской окунь</option>
+          </optgroup>
+          <optgroup label="Молочко">
+            <option name="fish[]" id="Пастеризованное">Пастеризованное молоко</option>
+            <option name="fish[]" id="Безлактозное">Безлактозное молоко</option>
+          </optgroup>
+        </select>
+      </label>
+    </div>
+    <div>
+      <label for="goodReviewsToday">К_во хороших отзывов ежедневно:</label>
+      <progress id="goodReviewsToday" max="10" value="9.48"></progress>
+    </div>
+    <div>
+      <label for="goodReviewsAll">К_во хороших отзывов за все время:</label>
+      <meter id="goodReviewsAll" value="9.4" max="10" min="0" low="3" high="8" optimum="5"></meter>
+    </div>
+  </fieldset>
+  <div>
+     <button type="reset" id="buttonReset">Стереть</button>
+    <button id="ButtonSubmit">Отправить</button>
+  </div>
+</form>
+</body>
+</html>
